@@ -3,16 +3,37 @@ body, html{
 }
 body{
   margin: 0px;
-  background-color:#444;
+  background-color:rgb(255, 255, 255);
+  background-image: url('images/grass.jpeg');
   font-size: 18px;
 }
 body, a:link, a:visited, a:active{
   color: lightblue;
 }
-.title, .addDancerButton{
+a, .title {
   padding:5px 12px;
   float:right;
 }
+/* .title, .addDancerButton{
+  padding:5px 12px;
+  float:right;
+}
+.title, .addDuckButton{
+  padding:5px 12px;
+  float:right;
+}
+.title, .addLineUpButton{
+  padding:5px 12px;
+  float:right;
+}
+.title, .addSpinButton{
+  padding:5px 12px;
+  float:right;
+}
+.title, .addGoatButton{
+  padding:5px 12px;
+  float:right;
+} */
 .topbar{
   height:32px;
   background-color: #555;
@@ -21,7 +42,68 @@ body, a:link, a:visited, a:active{
   background-color: #777;
 }
 .dancer{
-  border:10px solid red;
-  border-radius:10px;
-  position:absolute;
+  position: absolute;
+}
+.duckDancer{
+  width: 70px;
+  height: auto;
+  /* animation-duration: 10s;
+  /* animation-fill-mode: forwards; */
+  /* animation-iteration-count: infinite;
+  /* animation-name: march;
+  /* transition-duration: 5s; */
+  /* transition-start: left top; */
+
+}
+
+.goatDancer {
+  width: 100px;
+  height: auto;
+  animation-name: march;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.spinDancer {
+  width: 70px;
+  height: auto;
+}
+
+.pairDance {
+  animation-name: pair;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes pair {
+  25% {
+    transform: translate(60px, 60px);
+  }
+  50% {
+    transform: translate(0px, 120px);
+  }
+  75% {
+    transform: translate(-60px, 60px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+/* .box {
+  background-color: red;
+  height: 50px;
+  animation-name: color;
+  animation-duration: 3s;
+} */
+
+@keyframes march {
+  from {
+    left: 0;
+  }
+  to {
+    left: 100%;
+  }
 }
